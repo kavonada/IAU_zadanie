@@ -1,0 +1,105 @@
+{
+  "model": "Gradient Boosting",
+  "hyperparametre": {
+    "learning_rate": 0.1,
+    "max_depth": 2,
+    "max_iter": 100,
+    "min_samples_leaf": 100
+  },
+  "imputacia": "žiadna, chýbajúce hodnoty spracuje model",
+  "cielova_premenna": "Failure",
+  "prah_predikcie": 0.5,
+  "atributy_modelu": [
+    "motor_current",
+    "filter_dp",
+    "oilTemperature",
+    "pressure_reservoir",
+    "pressureOil",
+    "rms_vibration",
+    "flowmeter",
+    "humidityIntake",
+    "ambientNoise",
+    "dewpoint_discharge",
+    "aux_current",
+    "dutyClass"
+  ],
+  "vyradene_stlpce": [
+    "id_unit",
+    "numberSerial",
+    "macAddress",
+    "Ipv4",
+    "id_gateway",
+    "ts_cycle",
+    "last_overhaul",
+    "dateInstall",
+    "Failure"
+  ],
+  "datumove_stlpce": [
+    "ts_cycle",
+    "last_overhaul",
+    "dateInstall"
+  ],
+  "datum_referencny": "1970-01-01",
+  "hranice_orezania": {
+    "filter_dp": [
+      11.4985145,
+      45.5760575
+    ],
+    "rms_vibration": [
+      1.170247,
+      6.175818999999997
+    ]
+  },
+  "hranice_iqr_len_pre_trening": {
+    "oilTemperature": [
+      23.41827000000001,
+      86.32122999999999
+    ],
+    "pressure_reservoir": [
+      7.085714999999999,
+      10.328155
+    ],
+    "pressureOil": [
+      2.179967500000001,
+      5.217187499999999
+    ],
+    "flowmeter": [
+      17.387367499999996,
+      38.596787500000005
+    ],
+    "ambientNoise": [
+      58.388267500000005,
+      91.37100749999999
+    ],
+    "dewpoint_discharge": [
+      -1.6078725000000018,
+      17.686667500000002
+    ],
+    "aux_current": [
+      0.2349899999999996,
+      4.77003
+    ]
+  },
+  "trenovacie_data": {
+    "pocet_merani": 10328,
+    "podiel_poruch": 0.1215143299767622
+  },
+  "metriky": {
+    "CV_F1_opakovana": 0.41506059342800233,
+    "CV_F1_std": 0.018351039265871387,
+    "test": {
+      "accuracy": 0.7859507171754322,
+      "precision": 0.3189033189033189,
+      "recall": 0.6676737160120846,
+      "F1": 0.431640625,
+      "ROC-AUC": 0.8002170975724543
+    }
+  },
+  "verzie": {
+    "python": "3.13.2",
+    "scikit-learn": "1.9.1",
+    "pandas": "3.0.6",
+    "numpy": "2.5.3"
+  },
+  "vytvorene": "2026-11-21T22:29:40"
+}
